@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>换肤</title>
+		<link rel="icon" href="img/首页_fill.png" />
+		<style>
+			body{
+				/*background-color:#FFF3A5;*/
+				background-color:#B0C4DE;
+			}
+			fieldset{
+				border:2px solid #fff;
+				background-color:#B0C4DE;
+			}
+			legend{
+				color: #fff;
+				font-size:24px;
+				font-weight: bold;
+				background-color:#B0C4DE;
+			}
+			#bord{
+				float: left;
+				border:1px solid #fff;
+				width:100%;
+			}
+			.contents{
+				float: left;
+				margin:10px;
+				width:20px;
+				height:20px;
+				cursor: pointer;
+			}
+			#text{
+				border:1px solid #fff;
+			}
+		</style>
+		<script>
+			window.onload = function(){
+				var contents = document.getElementsByClassName('contents');
+				var body = document.getElementsByTagName('body')[0];
+				if(localStorage.getItem("bgcolor")) {
+					body.style.backgroundColor = localStorage.getItem("bgcolor");
+					let color = localStorage.getItem("bgcolor");
+					for(let i = 0;i<contents.length;i++) {
+						if(contents[i].style.backgroundColor === color) contents[i].style.marginTop = "5px";
+					}
+				}
+//				console.log(contents);
+				for(let i = 0; i < contents.length; i++){
+					contents[i].onclick = function(){
+//						console.log(contents[i].style.backgroundColor);
+//						console.log(body.style.backgroundColor);
+						for(let j = 0;j < contents.length; j++) {
+							contents[j].style.marginTop = "10px";
+						}
+						contents[i].style.marginTop = "5px";
+						localStorage.setItem("bgcolor",contents[i].style.backgroundColor);
+						body.style.backgroundColor = localStorage.getItem("bgcolor");
+					}
+				}
+			};
+		</script>
+	</head>
+	<body>
+		<fieldset>
+			<legend>页面换肤</legend>
+			<div id="bord">
+				<div class="contents" style="background-color: #F08080;"></div>
+				<div class="contents" style="background-color: #DAA520;"></div>
+				<div class="contents" style="background-color: #E6E6FA;"></div>
+				<div class="contents" style="background-color: #FFF0F5;"></div>
+				<div class="contents" style="background-color: #66CDAA;"></div>
+				<div class="contents" style="background-color: #FFDAB9;"></div>
+			</div>
+		</fieldset>
+	</body>
+</html>
