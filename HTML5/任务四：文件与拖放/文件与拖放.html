@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>文件与拖放</title>
+		<style>
+			#bg{
+				width:400px;
+				height:300px;
+				border: 1px solid #6600cc;
+			}
+		</style>
+		<script>
+				window.onload = function() {
+					var bg = document.getElementById('bg');
+					document.ondragover = function(e) {
+						e.preventDefault();
+					}
+					document.ondrop = function(e) {
+						e.preventDefault();
+					}
+
+					bg.ondragover = function(e) {
+						e.preventDefault();
+					}
+
+					bg.ondrop = function(e) {
+						var pic = e.dataTransfer.files[0];
+						var reader = new FileReader();
+						reader.readAsDataURL(pic);
+						reader.onload = function() {
+							var img = new Image();
+							img.src = reader.result;
+							bg.appendChild(img);
+						}
+					}
+				}
+		</script>
+	</head>
+	<body>
+		<h2>上传头像</h2>
+		<div id="bg"></div>
+	</body>
+</html>
