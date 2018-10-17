@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<head>
+	<title>刘小小</title>
+	<meta charset="utf-8"/>
+	<link rel="icon" href="img/钟表.png"/>
+	<style>
+		*{
+			padding: 0;
+			margin: 0;
+			background-color: #FFF0F5;
+		}
+		canvas{
+			border: 1;
+			solid: #000;
+			background-color: #FFF0F5;
+			margin-left: 400px;
+		}
+	</style>
+</head>
+<body>
+	<canvas id="myCanvas" width="500" height="500">
+	</canvas>
+	<script>
+		function clock(){
+			
+		
+			
+		//获取时间
+		var dates = new Date();
+        var h = dates.getHours();
+        var min = dates.getMinutes();
+        var sec = dates.getSeconds();
+        
+        
+		var c = document.getElementById("myCanvas");
+		var context = c.getContext("2d");
+		var deg = Math.PI / 180;
+		context.restore();
+		context.save();
+		context.translate(250,250)
+		//底盘
+		context.strokeStyle = "#000"
+		context.lineWidth = 1;
+		context.arc(0,0,200,0,2 * Math.PI,false);
+		context.fillStyle = "#E6E6FA";
+//		context.globalAlpha = 0.6;
+		context.stroke();
+		context.fill();
+		
+		
+		
+		//分针刻度
+		context.beginPath();
+		context.fillStyle = "indianred";
+		for(var i=0;i<60;i++){
+			context.fillRect(0,-200,5,15);
+			context.rotate(6*deg);
+		}
+		
+		
+		//时针刻度
+		context.beginPath();
+		context.fillStyle = "black";
+		for(var i=0;i<12;i++){
+			context.fillRect(0,-200,5,20);
+			context.rotate(30*deg);
+		}
+		
+		//1-12数字
+		context.beginPath();
+		context.fillStyle = "black";
+		context.translate(-10,10);
+		for(var i=12;i>0;i--){
+			context.font = "bold 25px 宋体";
+			context.fillText(i,Math.cos((90-30*i)*deg)*160,-Math.sin((90-30*i)*deg)*160,50);
+			
+		}
+		
+		//中间小圆点
+		context.beginPath();
+		context.translate(10,-10);
+		context.fillStyle = "black";
+		context.arc(0,0,3,0,2 * Math.PI,false);
+		context.stroke();
+		context.fill();
+		
+		
+		// 表盘时针
+		context.beginPath();
+		context.fillStyle = 'chocolate';
+		context.save();
+		context.rotate(30*(h+min/60)*deg);
+        context.fillRect(0, 0, 5, -80);
+        context.restore();
+
+		
+		// 表盘分针
+		context.beginPath();
+		context.fillStyle = 'brown';
+		context.save();
+		context.rotate(6*(min+sec/60)*deg);
+        context.fillRect(0, 0, 3, -100);
+        context.restore();
+
+        
+        // 表盘秒针
+		context.beginPath();
+		context.fillStyle = 'grey';
+		context.rotate(6*sec*deg);
+        context.fillRect(0, 0, 2, -140);
+        
+
+        
+        
+
+        
+        
+        }
+		
+		setInterval(clock,10);
+	
+	</script>
+</body>
+    
