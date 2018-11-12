@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <title>Bootstrap基本结构</title>
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <style>
+			
+	</style>
+</head>
+<body>
+   <div class="container">
+    <p></p>
+		<nav class="navbar navbar-inverse" style="margin-bottom: 0px;"> 
+			<div class="container-fluid">
+			  <div class="navbar-header">
+			    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-1">
+			      <span class="sr-only">导航开关</span>
+			      <span class="icon-bar"></span>
+			      <span class="icon-bar"></span>
+			      <span class="icon-bar"></span>
+			    </button>
+			    
+			    <a class="navbar-brand glyphicon glyphicon-bell" aria-hidden="true" href="#">Brand</a>
+			    
+			  </div>
+			  <div class="collapse navbar-collapse" id="bs-1">
+			    <ul class="nav navbar-nav">
+			      <li class="active"><a href="#">Link</a></li>
+			      <li><a href="#">Link</a></li>
+			      <li><a href="#">Link</a></li>
+			      <li><a href="#">Link</a></li>
+			      <li><a href="#">Link</a></li>    
+			    </ul>			    
+			  </div>
+			</nav> 			
+		  	<img src="img/banner.jpg" class="img-responsive" alt="Responsive image">
+		
+		<div class="row">
+		    <div class="col-sm-6 col-md-4">
+			    <h4>Content area1 <small>The first</small></h4>			    
+			    Bootstrap has a few easy ways to quickly getstarted, each one appealing to a different skilllevel and use case. Read through to see whatsuits your particular needs.
+		    </div>
+		    <div class="col-sm-6 col-md-4">
+			    <h4>Content area2 <small>The Second</small></h4>			    
+			    Bootstrap has a few easy ways to quickly getstarted, each one appealing to a different skilllevel and use case. Read through to see whatsuits your particular needs.
+		    </div>
+		    <div class="col-sm-6 col-md-4">
+			    <h4>Content area3 <small>The Third</small></h4>			    
+			    Bootstrap has a few easy ways to quickly getstarted, each one appealing to a different skilllevel and use case. Read through to see whatsuits your particular needs.
+		    </div>
+		 </div>
+		 
+		  <div style="margin-top: 40px;">
+		  	<h4>Report Table <small>From Detail</small></h4>                    
+			<table class="table table-striped">
+				<thead>
+					<tr>
+						<th>#</th>
+						<th>first</th>
+						<th>second</th>
+						<th>third</th>
+						<th>forth</th>
+						<th>fifth</th>
+					</tr>
+				</thead>
+				<tbody>
+				<tr>
+					<td>1</td>
+					<td>penatibus et magnis</td>
+					<td>what</td>
+					<td>messages</td>
+					<td>56</td>
+					<td><button type="button" class="btn btn-success">提交</button>
+</td>
+				</tr>
+				<tr>
+					<td>2</td>
+					<td>penatibus et</td>
+					<td>you</td>
+					<td>information</td>
+					<td>44</td>
+					<td><button type="button" class="btn btn-success">提交</button></td>
+				</tr>
+				<tr>
+					<td>3</td>
+					<td>nulla non</td>
+					<td>test</td>
+					<td>testing</td>
+					<td>32</td>
+					<td><button type="button" class="btn btn-success">提交</button></td>
+			</tbody>
+			</table>
+		  </div>
+		  
+		  <div>
+		  	<div class="col-sm-6 col-md-6">
+			    <a href="#" class="thumbnail">
+		        <img src="img/pic.jpg" alt="...">
+		      </a>
+		    </div>
+		    <div class="col-sm-6 col-md-6">
+		    	<h4 class="media-heading">Cum sociis natoque penatibus et magnis disparturient montes</h4>
+					<p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</p>
+		      <div class="media">
+				<div class="media-body">
+					<p></p>
+					<p>maecenas sed diam eget risus</p>
+					<p>maecenas sed diam eget risus</p>
+					<p>maecenas sed diam eget risus</p>
+					<p>maecenas sed diam eget risus</p>
+
+				</div> 
+				<div class="media-right">
+				  <img class="media-object " src="img/1.jpg" height="140" width="220" alt="image">
+				</div>
+		  </div>
+		    </div>
+		  </div>
+			</div>
+		  
+		  <div style="margin-left: 75px; margin-right: 75px;">
+		  	<div class="row">
+			  <div class="col-sm-6 col-md-6">
+			  	<h4 style="margin-left: 15px;">Images Show <small>Images</small></h4>
+			    <div class="row">
+		    <div class="col-sm-6 col-md-4">
+			    <a href="#" class="thumbnail">
+		        <img src="img/2.jpg" alt="...">
+		      </a>
+		    </div>
+		    <div class="col-sm-6 col-md-4">
+		      <a href="#" class="thumbnail">
+		        <img src="img/3.jpg" alt="...">
+		      </a>
+		    </div>
+		    <div class="col-sm-6 col-md-4">
+		      <a href="#" class="thumbnail">
+		        <img src="img/4.jpg" alt="...">
+		      </a>
+		    </div>
+		    <p style="margin-left: 15px;">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+		  </div>
+			  </div>
+			  <div class="col-sm-6 col-md-6">
+			    <div class="thumbnail">
+			    	<h4 style="margin-left: 15px;">User Login <small>From</small></h4>
+			    	<form class="form-horizontal" >
+		  <div class="form-group">
+		    <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
+		    <div class="col-sm-10">
+		      <input type="email" class="form-control col-sm-10" id="inputEmail3" placeholder="Email">
+		    </div>
+		  </div>
+		  <div class="form-group">
+		    <label for="inputPassword3" class="col-sm-2 control-label">Password</label>
+		    <div class="col-sm-10">
+		      <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
+		    </div>
+		  </div>
+		  <div class="form-group">
+		    <div class="col-sm-offset-2 col-sm-10">
+		      <div class="checkbox">
+		        <label>
+		        	<input type="checkbox"> Blue           
+		        </label>
+		        <label>
+		        	<input type="checkbox"> Red          
+		        </label>
+		      </div>
+		    </div>
+		  </div>
+		  <div class="form-group">
+		    <div class="col-sm-offset-2 col-sm-10">
+		      <button type="submit" class="btn btn-info">Sign in</button>
+		    </div>
+		  </div>
+		</form>
+			    </div>
+			  </div>
+			</div>
+		  </div>
+		</div>		
+		</div>
+	
+<footer class="navbar-inverse" style="margin-left: 75px; margin-right: 75px;">
+    	<div class="container">
+			<div class="row">
+				<div class="col-md-2">					
+					<p style="color: #fff;">网站地图</p>
+				</div>
+				<div class="col-md-2 col-md-push-8">
+					<a href="#ttop" style="color: #005CBF;">返回顶部</a>
+				</div>
+			</div>
+			<p style="color: #fff;">@copyright</p>
+    	</div>
+    </footer>
+</body>
+</html>
